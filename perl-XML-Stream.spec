@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	XML
-%define	pnam	Stream
+%define		pdir	XML
+%define		pnam	Stream
 Summary:	XML::Stream - XML streams interface for Perl
 Summary(pl):	XML::Stream - interfejs do strumieni XML dla Perla
 Name:		perl-XML-Stream
