@@ -1,8 +1,12 @@
+#
+# Conditional build:
+%bcond_without	tests	# do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	XML
 %define	pnam	Stream
-Summary:	XML::Stream - XML streams interface for perl
-Summary(pl):	XML::Stream - obs³uga strumieni XML
+Summary:	XML::Stream - XML streams interface for Perl
+Summary(pl):	XML::Stream - interfejs do strumieni XML dla Perla
 Name:		perl-XML-Stream
 Version:	1.17
 Release:	1
@@ -11,7 +15,7 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	3545686d95034a707e9f8cb17797214f
 BuildRequires:	perl-Unicode-String >= 2.06
-BuildRequires:	perl-devel >= 5.005_03-14
+BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -19,10 +23,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_noautoreq	'perl(HTTP::ProxyAutoConfig)'
 
 %description
-XML::Stream module - XML streams interface for perl.
+This module provides you with access to XML Streams. An XML Stream is
+just that. A stream of XML over a connection between two computers.
 
 %description -l pl
-Modu³ XML::Stream - Obs³uga strumieni XML dla perla.
+Ten modu³ daje dostêp do strumieni XML. Strumieñ XML jest po prostu
+tym, co mówi nazwa - strumieniem XML po po³±czeniu miêdzy dwoma
+komputerami.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
@@ -35,9 +42,10 @@ echo -e "y\ny\ny\n" | %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
 %{__make}
 
+%{?with_tests:%{__make} test}
+
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}
 
 %{__make} install \
 	UNINST=0 \
