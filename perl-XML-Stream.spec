@@ -1,12 +1,11 @@
+%include	/usr/lib/rpm/macros.perl
 %define	pdir	XML
 %define	pnam	Stream
-%include	/usr/lib/rpm/macros.perl
 Summary:	XML streams perl module
 Summary(pl):	Modu³ perla do obs³ugi strumieni XML
 Name:		perl-XML-Stream
 Version:	1.12
-Release:	2
-
+Release:	3
 License:	LGPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -25,7 +24,7 @@ Net-Jabber - XML streams interface for perl.
 Net-Jabber - Obs³uga strumieni XML dla perla.
 
 %prep
-%setup -q -n XML-Stream-%{version}
+%setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
 echo -e "y\ny\ny\n" |perl Makefile.PL
