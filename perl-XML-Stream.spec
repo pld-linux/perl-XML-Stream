@@ -9,10 +9,8 @@ Release:	1
 License:	LGPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.005_03-14
-%requires_eq	perl
-Requires:	%{perl_sitearch}
+BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_noautoreq "perl(HTTP::ProxyAutoConfig)"
@@ -36,15 +34,11 @@ install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}
 
 %{__make} install UNINST=0 DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf README CHANGES INFO
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
-
+%doc README CHANGES INFO
 %{perl_sitelib}/XML/*
-
 %{_mandir}/man3/*
