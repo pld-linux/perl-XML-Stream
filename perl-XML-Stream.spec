@@ -1,11 +1,11 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	XML
 %define	pnam	Stream
-Summary:	XML::Stream -- XML streams interface for perl
-Summary(pl):	XML::Stream -- obs³uga strumieni XML
+Summary:	XML::Stream - XML streams interface for perl
+Summary(pl):	XML::Stream - obs³uga strumieni XML
 Name:		perl-XML-Stream
 Version:	1.16
-Release:	2
+Release:	3
 License:	LGPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -25,6 +25,9 @@ Modu³ XML::Stream - Obs³uga strumieni XML dla perla.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
+for i in Stream.pm Stream/*.pm Stream/*/*.pm; do
+	%{__perl} -pi -e 's/^(use 5.006_)0(01;)(.*)$/$1$2$3/' $i
+done
 
 %build
 echo -e "y\ny\ny\n" | %{__perl} Makefile.PL \
