@@ -1,9 +1,12 @@
+%define	pdir	XML
+%define	pnam	Stream
 %include	/usr/lib/rpm/macros.perl
 Summary:	XML streams perl module
 Summary(pl):	Modu³ perla do obs³ugi strumieni XML
 Name:		perl-XML-Stream
 Version:	1.12
-Release:	1
+Release:	2
+
 License:	LGPL
 Group:		Development/Languages/Perl
 Group(cs):	Vıvojové prostøedky/Programovací jazyky/Perl
@@ -14,7 +17,7 @@ Group(ja):	³«È¯/¸À¸ì/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Group(pt):	Desenvolvimento/Linguagens/Perl
 Group(ru):	òÁÚÒÁÂÏÔËÁ/ñÚÙËÉ/Perl
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/XML/XML-Stream-%{version}.tar.gz
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.005_03-14
 %requires_eq	perl
