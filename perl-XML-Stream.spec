@@ -10,13 +10,13 @@ License:	LGPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	bce46a58273f3d2e1655ee20e1298fd4
-BuildRequires:	perl-devel >= 5.005_03-14
 BuildRequires:	perl-Unicode-String >= 2.06
+BuildRequires:	perl-devel >= 5.005_03-14
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_noautoreq	"perl(HTTP::ProxyAutoConfig)"
+%define		_noautoreq	'perl(HTTP::ProxyAutoConfig)'
 
 %description
 XML::Stream module - XML streams interface for perl.
@@ -39,7 +39,9 @@ echo -e "y\ny\ny\n" | %{__perl} Makefile.PL \
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}
 
-%{__make} install UNINST=0 DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	UNINST=0 \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
