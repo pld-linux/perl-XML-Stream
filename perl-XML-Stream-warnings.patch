@@ -1,0 +1,12 @@
+diff -Nur XML-Stream-1.22.ori/lib/XML/Stream/Namespace.pm XML-Stream-1.22.mod/lib/XML/Stream/Namespace.pm
+--- XML-Stream-1.22.ori/lib/XML/Stream/Namespace.pm	2005-01-22 11:27:35.000000000 +0100
++++ XML-Stream-1.22.mod/lib/XML/Stream/Namespace.pm	2005-01-22 11:28:05.000000000 +0100
+@@ -162,6 +162,8 @@
+   my $self = shift;
+   my ($attrib) = @_;
+ 
++  $attrib = '' unless $attrib;
++
+   return $self->{Attributes} if ($attrib eq "");
+   return $self->{Attributes}->{$attrib};
+ }
