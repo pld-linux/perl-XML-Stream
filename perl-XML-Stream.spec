@@ -4,8 +4,8 @@
 Summary:	XML streams perl module
 Summary(pl):	Modu³ perla do obs³ugi strumieni XML
 Name:		perl-XML-Stream
-Version:	1.12
-Release:	3
+Version:	1.14
+Release:	1
 License:	LGPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
