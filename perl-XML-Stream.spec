@@ -22,16 +22,17 @@ Net-Jabber - XML streams interface for perl.
 
 %description -l pl
 Net-Jabber - Obs³uga strumieni XML dla perla.
+
 %prep
 %setup -q -n XML-Stream-%{version}
 
 %build
 echo -e "y\ny\ny\n" |perl Makefile.PL
-%{__make} OPTIMIZE="%{?debug:-O -g}%{!?debug:$RPM_OPT_FLAGS}"
+%{__make} OPTIMIZE="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_prefix}/src/examples/%{name}
+install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}
 
 %{__make} install UNINST=0 DESTDIR=$RPM_BUILD_ROOT
 
