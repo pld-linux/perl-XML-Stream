@@ -9,6 +9,7 @@ Release:	3
 License:	LGPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	bce46a58273f3d2e1655ee20e1298fd4
 BuildRequires:	perl-devel >= 5.005_03-14
 BuildRequires:	perl-Unicode-String >= 2.06
 BuildRequires:	rpm-perlprov >= 4.1-13
