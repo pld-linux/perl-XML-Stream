@@ -4,29 +4,31 @@
 Summary:	XML streams perl module
 Summary(pl):	Modu³ perla do obs³ugi strumieni XML
 Name:		perl-XML-Stream
-Version:	1.14
+Version:	1.15
 Release:	1
 License:	LGPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.005_03-14
+BuildRequires:	perl-Unicode-String >= 2.06
 BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_noautoreq "perl(HTTP::ProxyAutoConfig)"
 
 %description
-Net-Jabber - XML streams interface for perl.
+XML::Stream module - XML streams interface for perl.
 
 %description -l pl
-Net-Jabber - Obs³uga strumieni XML dla perla.
+Modu³ XML::Stream - Obs³uga strumieni XML dla perla.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
 echo -e "y\ny\ny\n" |perl Makefile.PL
-%{__make} OPTIMIZE="%{rpmcflags}"
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
