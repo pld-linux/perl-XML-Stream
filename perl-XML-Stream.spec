@@ -4,12 +4,12 @@
 Summary:	XML::Stream - XML streams interface for perl
 Summary(pl):	XML::Stream - obs³uga strumieni XML
 Name:		perl-XML-Stream
-Version:	1.16
-Release:	3
+Version:	1.17
+Release:	1
 License:	LGPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	bce46a58273f3d2e1655ee20e1298fd4
+# Source0-md5:	3545686d95034a707e9f8cb17797214f
 BuildRequires:	perl-Unicode-String >= 2.06
 BuildRequires:	perl-devel >= 5.005_03-14
 BuildRequires:	rpm-perlprov >= 4.1-13
