@@ -8,12 +8,12 @@
 Summary:	XML::Stream - XML streams interface for Perl
 Summary(pl):	XML::Stream - interfejs do strumieni XML dla Perla
 Name:		perl-XML-Stream
-Version:	1.17
+Version:	1.19
 Release:	1
 License:	LGPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	3545686d95034a707e9f8cb17797214f
+# Source0-md5:	2d6a5b66d02c79c86e54bc3e79e2c3b0
 BuildRequires:	perl-Unicode-String >= 2.06
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -34,7 +34,7 @@ komputerami.
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
 for i in Stream.pm Stream/*.pm Stream/*/*.pm; do
-	%{__perl} -pi -e 's/^(use 5.006_)0(01;)(.*)$/$1$2$3/' $i
+	%{__perl} -pi -e 's/^(use 5.006_)0(01;)(.*)$/$1$2$3/' lib/XML/$i
 done
 
 %build
