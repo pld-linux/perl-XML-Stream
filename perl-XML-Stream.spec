@@ -6,7 +6,7 @@
 %define		pdir	XML
 %define		pnam	Stream
 Summary:	XML::Stream - XML streams interface for Perl
-Summary(pl):	XML::Stream - interfejs do strumieni XML dla Perla
+Summary(pl.UTF-8):   XML::Stream - interfejs do strumieni XML dla Perla
 Name:		perl-XML-Stream
 Version:	1.22
 Release:	2
@@ -28,9 +28,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This module provides you with access to XML Streams. An XML Stream is
 just that. A stream of XML over a connection between two computers.
 
-%description -l pl
-Ten modu³ daje dostêp do strumieni XML. Strumieñ XML jest po prostu
-tym, co mówi nazwa - strumieniem XML po po³±czeniu miêdzy dwoma
+%description -l pl.UTF-8
+Ten moduÅ‚ daje dostÄ™p do strumieni XML. StrumieÅ„ XML jest po prostu
+tym, co mÃ³wi nazwa - strumieniem XML po poÅ‚Ä…czeniu miÄ™dzy dwoma
 komputerami.
 
 %prep
