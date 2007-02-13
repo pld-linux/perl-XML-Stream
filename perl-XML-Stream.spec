@@ -6,7 +6,7 @@
 %define		pdir	XML
 %define		pnam	Stream
 Summary:	XML::Stream - XML streams interface for Perl
-Summary(pl.UTF-8):   XML::Stream - interfejs do strumieni XML dla Perla
+Summary(pl.UTF-8):	XML::Stream - interfejs do strumieni XML dla Perla
 Name:		perl-XML-Stream
 Version:	1.22
 Release:	2
