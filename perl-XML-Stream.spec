@@ -8,13 +8,13 @@
 Summary:	XML::Stream - XML streams interface for Perl
 Summary(pl.UTF-8):	XML::Stream - interfejs do strumieni XML dla Perla
 Name:		perl-XML-Stream
-Version:	1.22
-Release:	3
+Version:	1.23
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/XML/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	ae09400fac17eaea4c9b12283db06881
+# Source0-md5:	1c0908384fe57a1c3c529071a8b882af
 Patch0:		%{name}-warnings.patch
 URL:		http://search.cpan.org/dist/XML-Stream/
 %{?with_tests:BuildRequires:	perl-Authen-SASL}
