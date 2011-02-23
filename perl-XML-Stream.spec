@@ -13,7 +13,8 @@ Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/XML/%{pdir}-%{pnam}-%{version}.tar.gz
+#Source0:	http://www.cpan.org/modules/by-module/XML/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://sunsite.icm.edu.pl/pub/CPAN/modules/by-module/XML/XML-Stream-1.23.tar.gz
 # Source0-md5:	1c0908384fe57a1c3c529071a8b882af
 Patch0:		%{name}-warnings.patch
 URL:		http://search.cpan.org/dist/XML-Stream/
