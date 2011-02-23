@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_without	tests	# do not perform "make test"
+%bcond_with	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	XML
@@ -18,6 +18,7 @@ Source0:	http://www.cpan.org/modules/by-module/XML/%{pdir}-%{pnam}-%{version}.ta
 Patch0:		%{name}-warnings.patch
 URL:		http://search.cpan.org/dist/XML-Stream/
 %{?with_tests:BuildRequires:	perl-Authen-SASL}
+%{?with_tests:BuildRequires:	perl-Encode}
 BuildRequires:	perl-Unicode-String >= 2.06
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
