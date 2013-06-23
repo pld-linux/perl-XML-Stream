@@ -9,7 +9,7 @@ Summary:	XML::Stream - XML streams interface for Perl
 Summary(pl.UTF-8):	XML::Stream - interfejs do strumieni XML dla Perla
 Name:		perl-XML-Stream
 Version:	1.23
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
