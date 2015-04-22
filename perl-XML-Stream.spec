@@ -17,11 +17,15 @@ Source0:	http://www.cpan.org/modules/by-module/XML/%{pdir}-%{pnam}-%{version}.ta
 # Source0-md5:	62717494479cba3746bfeab73d2f955c
 Patch0:		%{name}-warnings.patch
 URL:		http://search.cpan.org/dist/XML-Stream/
-%{?with_tests:BuildRequires:	perl-Authen-SASL}
-%{?with_tests:BuildRequires:	perl-Encode}
 BuildRequires:	perl-Unicode-String >= 2.06
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+%if %{with tests}
+BuildRequires:	perl-Authen-SASL
+BuildRequires:	perl-Encode
+BuildRequires:	perl-MIME-Base64
+BuildRequires:	perl-Test-Simple >= 0.92
+%endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
