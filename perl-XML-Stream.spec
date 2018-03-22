@@ -9,13 +9,14 @@ Summary:	XML::Stream - XML streams interface for Perl
 Summary(pl.UTF-8):	XML::Stream - interfejs do strumieni XML dla Perla
 Name:		perl-XML-Stream
 Version:	1.24
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/XML/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	62717494479cba3746bfeab73d2f955c
 Patch0:		%{name}-warnings.patch
+Patch1:		ssl-ca.patch
 URL:		http://search.cpan.org/dist/XML-Stream/
 BuildRequires:	perl-Unicode-String >= 2.06
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -46,6 +47,7 @@ for i in Stream.pm Stream/*.pm Stream/*/*.pm; do
 	%{__perl} -pi -e 's/^(use 5.006_)0(01;)(.*)$/$1$2$3/' lib/XML/$i
 done
 %patch0 -p1
+%patch1 -p1
 
 %build
 echo -e "y\ny\ny\n" | %{__perl} Makefile.PL \

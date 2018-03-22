@@ -1,0 +1,11 @@
+--- a/lib/XML/Stream.pm~	2018-03-22 13:21:14.000000000 +0100
++++ b/lib/XML/Stream.pm	2018-03-22 13:22:24.625560657 +0100
+@@ -220,7 +220,7 @@ sub new
+     $self->{SIDS}->{default}->{ssl} = 0;
+     $self->{SIDS}->{default}->{_tls} = 0;
+     $self->{SIDS}->{default}->{ssl_verify} = 0x01; # verify peer by default
+-    $self->{SIDS}->{default}->{ssl_ca_path} = '';
++    $self->{SIDS}->{default}->{ssl_ca_path} = '/etc/pki/tls/certs/ca-bundle.crt';
+     $self->{SIDS}->{default}->{namespace} = "";
+     $self->{SIDS}->{default}->{myhostname} = $fullname;
+     $self->{SIDS}->{default}->{derivedhostname} = $fullname;
