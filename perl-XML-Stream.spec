@@ -45,8 +45,8 @@ komputerami.
 for i in Stream.pm Stream/*.pm Stream/*/*.pm; do
 	%{__perl} -pi -e 's/^(use 5.006_)0(01;)(.*)$/$1$2$3/' lib/XML/$i
 done
-%patch0 -p1
-%patch1 -p1
+%patch -P0 -p1
+%patch -P1 -p1
 
 %build
 echo -e "y\ny\ny\n" | %{__perl} Makefile.PL \
